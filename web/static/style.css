@@ -1,0 +1,166 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0d1117;
+    overflow-x: hidden;
+}
+
+/* ================= CYBER GRID BACKGROUND ================= */
+
+.cyber-bg {
+    position: fixed;
+    inset: 0;
+    background:
+        linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: moveGrid 15s linear infinite;
+    z-index: -10;
+}
+
+@keyframes moveGrid {
+    from { background-position: 0 0; }
+    to { background-position: 40px 40px; }
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    padding-top: 80px; /* offset for fixed navbar */
+    overflow: hidden;
+}
+
+/* VIDEO */
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* DARK OVERLAY */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* CONTENT */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* ================= SERVICE CARDS ================= */
+
+.service-card {
+    background: linear-gradient(145deg, #161b22, #1c2128);
+    border-radius: 12px;
+    border: 1px solid rgba(0,255,255,0.2);
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px #00ffff;
+    border-color: #00ffff;
+}
+
+/* ================= LOGIN MODAL ================= */
+
+.login-modal {
+    position: fixed;
+    top: -600px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 380px;
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px #00ffff;
+    transition: 0.5s ease;
+    z-index: 9999;
+}
+
+.login-modal.show-modal {
+    top: 150px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer-section {
+    background: #0a0f1c;
+    padding: 60px 0;
+    margin-top: 80px;
+    border-top: 1px solid rgba(0,255,255,0.2);
+}
+
+.footer-section h5 {
+    color: #00ffff;
+    margin-bottom: 20px;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: #00ffff;
+    padding-left: 5px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    border-bottom: 1px solid rgba(0,255,255,0.2);
+    background: rgba(0,0,0,0.6) !important;
+    backdrop-filter: blur(6px);
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================= HERO BUTTON EFFECT ================= */
+
+.hero-content .btn {
+    transition: all 0.3s ease;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+}
+
+.hero-content .btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 0 20px #00ffff;
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+/* ================= NAVBAR BUTTON EFFECT ================= */
+
+.navbar .nav-link,
+.navbar .btn {
+    transition: all 0.25s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    color: #00ffff !important;
+    text-shadow: 0 0 8px #00ffff;
+}
+
+.navbar .btn:hover {
+    box-shadow: 0 0 15px #00ffff;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>0xMalCore | Smart Honeypot Platform</title>
+
+    <!-- FIXED STATIC PATHS -->
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="/static/script.js"></script>
+</head>
+
+<body>
+
+<div class="cyber-bg"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black px-4 fixed-top shadow">
+    <a class="navbar-brand text-info fw-bold">0xMalCore</a>
+
+    <div class="ms-auto d-flex gap-4 align-items-center">
+        <a class="nav-link text-white" href="#home">Home</a>
+        <a class="nav-link text-white" href="#usecase">Use Case</a>
+        <a class="nav-link text-white" href="#stats">Stats</a>
+        <a class="nav-link text-white" href="#contact">Contact</a>
+        <a id="loginNav" class="btn btn-info btn-sm fw-bold" href="#">Login</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<!-- HERO -->
+<section id="home" class="hero-section d-flex align-items-center text-white text-center">
+
+    <!-- VIDEO BACKGROUND -->
+    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+    <source src="/static/DetectFlow__HP_big.mp4" type="video/mp4">
+</video>
+
+    <!-- DARK OVERLAY -->
+    <div class="hero-overlay"></div>
+
+    <!-- CONTENT -->
+    <div class="container hero-content">
+        <h1 class="text-info fw-bold mb-4">
+            Intelligent Honeypot & Threat Intelligence System
+        </h1>
+        <p class="mb-5">
+            Real-time attack monitoring, IP tracking, payload analysis, and blue team analytics.
+        </p>
+        <a href="#usecase" id="exploreBtn" class="btn btn-outline-info px-4">
+    Explore Platform
+</a>
+    </div>
+
+</section>
+
+<!-- USE CASE -->
+<section id="usecase" class="py-5 bg-dark text-white">
+    <div class="container text-center">
+        <h2 class="text-info fw-bold mb-5">Use Cases</h2>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="service-card p-4">
+                    <h4>Threat Intelligence</h4>
+                    <p>Collect attacker IPs, ports, and malicious payload signatures.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-card p-4">
+                    <h4>Malware Analysis</h4>
+                    <p>Detect exploit attempts through HTTP & SSH honeypots.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-card p-4">
+                    <h4>Blue Team Research</h4>
+                    <p>Generate actionable logs for defensive security operations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section id="stats" class="py-5 text-white">
+    <div class="container text-center">
+        <h2 class="text-info fw-bold mb-4">Attack Activity Overview</h2>
+        <canvas id="attackChart" height="100"></canvas>
+    </div>
+</section>
+
+<!-- LOGIN MODAL -->
+<div id="loginBox" class="login-modal">
+    <h4 class="text-info text-center mb-3">Welcome Back, Operator</h4>
+
+    {{ERROR}}
+
+    <form method="POST" action="/">
+        <input name="username" class="form-control mb-3" placeholder="Username" required>
+        <input type="password" name="password" class="form-control mb-3" placeholder="Password" required>
+        <button class="btn btn-info w-100">Secure Login</button>
+    </form>
+</div>
+
+<!-- FOOTER -->
+<footer id="contact" class="footer-section">
+    <div class="container">
+        <div class="row text-white">
+
+            <div class="col-md-4">
+                <h5>Contact</h5>
+                <p><a href="mailto:shezanshaikh@protonmail.com">Email</a></p>
+                <p><a href="https://discord.gg/M8tmkbAvMN" target="_blank">Discord</a></p>
+                <p><a href="https://www.linkedin.com/in/shzn.18" target="_blank">LinkedIn</a></p>
+            </div>
+
+            <div class="col-md-4">
+                <h5>Projects</h5>
+                <p><a href="https://github.com/0xMalCore/Smart_HoneyPot" target="_blank">Smart-Honeypot</a></p>
+                <p><a href="https://github.com/0xMalCore/MalScan-Project" target="_blank">MalScan</a></p>
+                <p><a href="https://github.com/0xMalCore?tab=repositories" target="_blank">All Repositories</a></p>
+            </div>
+
+            <div class="col-md-4">
+                <h5>About</h5>
+                <p>Reverse Engineering & Blue Team Operations Platform.</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<!-- CHART -->
+<script>
+const ctx = document.getElementById('attackChart');
+
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+        datasets: [{
+            label: 'Detected Attacks',
+            data: [12, 19, 8, 15, 22, 30, 18],
+            borderColor: '#00ffff',
+            borderWidth: 2,
+            tension: 0.4
+        }]
+    },
+    options: {
+        plugins: {
+            legend: { labels: { color: 'white' } }
+        },
+        scales: {
+            x: { ticks: { color: 'white' } },
+            y: { ticks: { color: 'white' } }
+        }
+    }
+});
+</script>
+
+</body>
+</html>
