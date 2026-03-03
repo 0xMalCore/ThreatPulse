@@ -240,3 +240,10 @@ Do NOT deploy on public infrastructure without proper security controls.
 ## 👤 Author
 
 Developed by **0xMalCore**
+
+---
+
+## 📜 License
+
+This project is licensed under the Apache License 2.0.  
+See the [LICENSE](LICENSE) file for full details.
