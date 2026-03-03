@@ -1,4 +1,5 @@
-# 🛡 ThreatPulse  
+<img width="1284" height="396" alt="GitHub Banners" src="https://github.com/user-attachments/assets/d8ecf2c2-a673-44d6-b4f7-6c0e260ff87f" />
+
 </p>
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
@@ -6,9 +7,6 @@
 ![Dash](https://img.shields.io/badge/Dash-Framework-008DE4?logo=plotly)
 ![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-
-
-### Intelligent Multi-Protocol Honeypot & SOC Dashboard
 
 ThreatPulse is a local multi-protocol intelligent honeypot system that simulates SSH and HTTP services to capture attacker behavior, log credential attempts, detect brute-force activity, and visualize live attack telemetry through an interactive SOC-style dashboard.
 
