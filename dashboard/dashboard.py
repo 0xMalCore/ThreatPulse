@@ -78,7 +78,10 @@ app.layout = dbc.Container([
 
     html.Div(id="live-dashboard")
 
-], fluid=True)
+], fluid=True, style={
+    "backgroundColor": "black",
+    "minHeight": "100vh"
+})
 
 
 # ================= CALLBACK =================
@@ -172,13 +175,19 @@ def update_dashboard(n):
             ], className="mt-4"),
 
             dbc.Row([
-                dbc.Col(brute_section, md=6),
-                dbc.Col(risk_bar, md=6),
+                dbc.Col(brute_section, md=12),
             ], className="mt-4"),
 
             dbc.Row([
-                dbc.Col(html.H4("Latest Attack Logs"), className="mt-4"),
-                dbc.Col(logs_table)
+                dbc.Col(risk_bar, md=12),
+            ], className="mt-2"),
+
+            dbc.Row([
+                dbc.Col(html.H4("Latest Attack Logs"), width=12)
+            ], className="mt-4"),
+
+            dbc.Row([
+                dbc.Col(logs_table, width=12)
             ])
 
         ], fluid=True)
