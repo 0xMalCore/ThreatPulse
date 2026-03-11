@@ -29,6 +29,49 @@ The system records authentication attempts, command executions, and metadata int
 
 ---
 
+## 📸 System Screenshots
+
+### 🔐 Main Login Page
+![Main Login](screenshots/login.JPG)
+
+### 🛡 Admin Login Interface
+![Admin Login](screenshots/admin-login.PNG)
+
+### 👨‍💻 Employee Login Interface
+![Employee Login](screenshots/emp-login.PNG)
+
+### 📊 SOC Threat Intelligence Dashboard
+![SOC Dashboard](screenshots/dashboard.PNG)
+
+### ⌨ Captured SSH Attack Commands
+![SSH Attack Commands](screenshots/attack-ssh.PNG)
+
+---
+## 📐 System Design Diagrams
+
+### ➣ System Architecture
+![System Architecture](UML-Diagrams/System-Architecture-Diagram.png)
+
+### ➣ Use Case Diagram
+![Use Case](UML-Diagrams/Use-Case-Diagram.png)
+
+### ➣ Activity Diagram
+![Activity Diagram](UML-Diagrams/Activity-Diagram.png)
+
+### ➣ Sequence Diagram
+![Sequence Diagram](UML-Diagrams/Sequence-Diagram.png)
+
+### ➣ Data Flow Diagram (Level 0)
+![DFD Level 0](UML-Diagrams/DFD-Diagram-L-0.png)
+
+### ➣ Data Flow Diagram (Level 1)
+![DFD Level 1](UML-Diagrams/DFD-Diagram-L-1.png)
+
+### ➣ Entity Relationship Diagram
+![ER Diagram](UML-Diagrams/ER-Diagram.png)
+
+---
+
 ## 🏗 Project Structure
 
 ```
@@ -67,7 +110,23 @@ ThreatPulse
 │   ├── http.log
 │   └── ssh.log
 │
-├── screenshots/               # README screenshots and visuals
+├── screenshots/               # Application interface screenshots
+│   ├── login.JPG
+│   ├── admin-login.PNG
+│   ├── emp-login.PNG
+│   ├── dashboard.PNG
+│   ├── attack-ssh.PNG
+│   ├── Gantt-Chart-estimate.JPG
+│   └── Gantt-Chart-final.JPG
+│
+├── UML-Diagrams/              # System design and UML diagrams
+│   ├── Activity-Diagram.png
+│   ├── DFD-Diagram-L-0.png
+│   ├── DFD-Diagram-L-1.png
+│   ├── ER-Diagram.png
+│   ├── Sequence-Diagram.png
+│   ├── System-Architecture-Diagram.png
+│   └── Use-Case-Diagram.png
 │
 ├── app.py                     # Main entry point (starts honeypots)
 ├── requirements.txt           # Python dependencies
@@ -242,6 +301,12 @@ Do NOT deploy on public infrastructure without proper security controls.
 - Pandas
 - Requests
 - HTML / CSS / JavaScript
+
+---
+
+### 📈 Gantt Chart
+
+![Gantt Final](screenshots/Gantt-Chart-final.JPG)
 
 ---
 
