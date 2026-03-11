@@ -32,44 +32,46 @@ The system records authentication attempts, command executions, and metadata int
 ## 🏗 Project Structure
 
 ```
-ThreatPulse/
+ThreatPulse
 │
-├── analytics/
-│   ├── geoip.py
-│   ├── parser.py
-│   └── statistics.py
+├── analytics/                 # Data processing and attack analysis modules
+│   ├── geoip.py               # GeoIP lookup for attacker location
+│   ├── parser.py              # Log parsing and attack data extraction
+│   └── statistics.py          # Attack analytics and metrics
 │
 ├── config/
-│   └── settings.py
+│   └── settings.py            # Application configuration and thresholds
 │
 ├── dashboard/
-│   └── dashboard.py
+│   └── dashboard.py           # Dash-based SOC monitoring dashboard
 │
 ├── data/
-│   └── attackers.db
+│   └── attackers.db           # Centralized SQLite attack database
 │
 ├── honeypots/
-│   ├── http_honeypot.py
-│   └── ssh_honeypot.py
+│   ├── http_honeypot.py       # HTTP login honeypot service
+│   └── ssh_honeypot.py        # SSH honeypot server using Paramiko
 │
 ├── web/
-│   ├── static/
+│   ├── static/                # Frontend static assets
 │   │   ├── style.css
 │   │   ├── script.js
 │   │   └── DetectFlow__HP_big.mp4
 │   │
-│   └── templates/
+│   └── templates/             # Web interface templates
 │       ├── index.html
 │       ├── admin_dashboard.html
 │       └── employee_dashboard.html
 │
-├── logs/
+├── logs/                      # Runtime honeypot logs
 │   ├── http.log
 │   └── ssh.log
 │
-├── app.py
-├── requirements.txt
-└── README.md
+├── screenshots/               # README screenshots and visuals
+│
+├── app.py                     # Main entry point (starts honeypots)
+├── requirements.txt           # Python dependencies
+└── README.md                  # Project documentation
 ```
 
 ---
